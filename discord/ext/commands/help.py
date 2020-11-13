@@ -307,7 +307,7 @@ class HelpCommand:
         self.verify_checks = options.pop('verify_checks', True)
         self.command_attrs = attrs = options.pop('command_attrs', {})
         attrs.setdefault('name', 'help')
-        attrs.setdefault('help', 'Shows this message')
+        attrs.setdefault('help', 'Zeigt diese Nachricht an')
         self.context = None
         self._command_impl = None
 
@@ -929,8 +929,8 @@ class DefaultHelpCommand(HelpCommand):
     def get_ending_note(self):
         """:class:`str`: Returns help command's ending note. This is mainly useful to override for i18n purposes."""
         command_name = self.invoked_with
-        return "Type {0}{1} command for more info on a command.\n" \
-               "You can also type {0}{1} category for more info on a category.".format(self.clean_prefix, command_name)
+        return "Gib {0}{1} [Befehl] ein, um mehr Informationen zu einem Befehl zu erhalten.\n" \
+               "Du kannst auch {0}{1} [Kategorie] eingeben, um mehr über eine Kategorie zu erfahren.".format(self.clean_prefix, command_name)
 
     def add_indented_commands(self, commands, *, heading, max_size=None):
         """Indents a list of commands after the specified heading.
