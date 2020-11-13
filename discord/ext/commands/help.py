@@ -912,7 +912,7 @@ class DefaultHelpCommand(HelpCommand):
         self.dm_help = options.pop('dm_help', False)
         self.dm_help_threshold = options.pop('dm_help_threshold', 1000)
         self.commands_heading = options.pop('commands_heading', "Commands:")
-        self.no_category = options.pop('no_category', 'No Category')
+        self.no_category = options.pop('no_category', 'Keine Kategorie')
         self.paginator = options.pop('paginator', None)
 
         if self.paginator is None:
@@ -1110,7 +1110,7 @@ class MinimalHelpCommand(HelpCommand):
         self.dm_help = options.pop('dm_help', False)
         self.dm_help_threshold = options.pop('dm_help_threshold', 1000)
         self.aliases_heading = options.pop('aliases_heading', "Aliases:")
-        self.no_category = options.pop('no_category', 'No Category')
+        self.no_category = options.pop('no_category', 'Keine Kategorie')
         self.paginator = options.pop('paginator', None)
 
         if self.paginator is None:
